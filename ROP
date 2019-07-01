@@ -1,0 +1,32 @@
+# ROP Program
+
+# Reorder Point (ROP)
+ROP = "x"
+
+# Demand
+D = "x"
+
+# Delivery Time
+T = "x"
+
+# Safety Stock (Demand*safety_period)
+SS = "x"
+
+# importing math library
+import math
+
+# ROP function defined
+def find_ROP(ROP, D, T, SS):
+    if ROP == "x":
+        return print("< " + str((D*T)+SS))
+    elif D == "x":
+        return print((ROP/T)-(SS/T))
+    elif T == "x":
+        return print((ROP/D)-(SS/D))
+    elif SS == "x":
+        return print((ROP-(D*T)))
+    else:
+        return print(Error)
+
+# calling find_ROP function
+find_ROP(ROP, D, T, SS)
